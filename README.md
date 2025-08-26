@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WebRTC Project
 
-## Getting Started
+## Live Link
 
-First, run the development server:
+https://webrtc-next.onrender.com/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project is a WebRTC-based application that enables real-time peer-to-peer communication through audio, video, and data channels. It uses Next.js for the frontend and an Express.js + Socket.io signaling server to exchange SDP and ICE candidates for connection setup.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Real-time audio and video communication
+- Data channel for sending messages
+- Peer-to-peer connection setup via Socket.io signaling
+- Responsive design for vdesktop and mobile
+- Easy setup and deployment
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- WebRTC – real-time peer-to-peer media and data transfer
+- Next.js – frontend framework for fast and scalable UI
+- Node.js – runtime environment
+- Express.js – backend server for routing and signaling logic
+- Socket.io – real-time communication between peers
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clone the repository:
 
-## Deploy on Vercel
+   ```bash
+   git clone https://github.com/jxeal/webrtc-next
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Navigate to the project directory:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   cd webrtc-next
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and navigate to `http://localhost:3000` to access the application.
+
+## Usage
+
+1. Create/Join a room
+2. Start VC
+3. Stop VC once to be able to restart the VC
+   Stop VC twice to end camera usage for both peers
+4. Incase VC was stopped, turn on camera from both sides and start VC
+
+## Contributing
+
+Contributions are welcome! Please follow these steps to contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes and commit them (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a pull request.
+
+## Acknowledgments
+
+- [WebRTC Documentation](https://webrtc.org/)
+- [Socket.io Documentation](https://socket.io/docs/)
+- [Express.js Documentation](https://expressjs.com/)
+- [Next.js Documentation](https://nextjs.org/docs)

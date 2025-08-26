@@ -298,13 +298,13 @@ const VideoCall: React.FC = () => {
           onClick={handleCameraClick}
           className="w-full md:w-auto bg-[#555] hover:bg-[#666] text-white text-base md:text-lg rounded-md px-4 py-2"
         >
-          {camera ? <Camera size={28} /> : <CameraOff size={28} />}
+          {camera ? <Camera size={28} /> : <CameraOff size={28} color="red" />}
         </button>
         <button
           onClick={handleAudio}
           className="w-full md:w-auto bg-[#555] hover:bg-[#666] text-white text-base md:text-lg rounded-md px-4 py-2"
         >
-          {mic ? <Mic size={28} /> : <MicOff size={28} />}
+          {mic ? <Mic size={28} /> : <MicOff size={28} color="red" />}
         </button>
         <button
           onClick={handleCreate}
