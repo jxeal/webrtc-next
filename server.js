@@ -4,7 +4,7 @@ const http = require("http");
 const { Server } = require("socket.io");
 const dev = process.env.NODE_ENV !== "production";
 
-const app = next({ dev: true, turbo: true }); // always run in dev with Turbopack
+const app = next({ dev }); // always run in dev with Turbopack
 const handle = app.getRequestHandler();
 
 const PORT = process.env.PORT || 3000;// fixed port, no env
