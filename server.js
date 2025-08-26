@@ -2,11 +2,12 @@ const express = require("express");
 const next = require("next");
 const http = require("http");
 const { Server } = require("socket.io");
+const dev = process.env.NODE_ENV !== "production";
 
 const app = next({ dev: true, turbo: true }); // always run in dev with Turbopack
 const handle = app.getRequestHandler();
 
-const PORT = 3000 || 3001; // fixed port, no env
+const PORT = process.env.PORT || 3000;// fixed port, no env
 
 app.prepare().then(() => {
     const server = express();
@@ -95,7 +96,7 @@ app.prepare().then(() => {
     // Let Next.js handle everything else
     server.use((req, res) => handle(req, res));
 
-    httpServer.listen(PORT, () => {
+    httpServer.listen(PORT, "0.0.0.0", () => {
         console.log(`Server ready at http://localhost:${PORT}`);
     });
 });
