@@ -6,7 +6,7 @@ const { Server } = require("socket.io");
 const app = next({ dev: true, turbo: true }); // always run in dev with Turbopack
 const handle = app.getRequestHandler();
 
-const PORT = 3000; // fixed port, no env
+const PORT = 3000 || 3001; // fixed port, no env
 
 app.prepare().then(() => {
     const server = express();
